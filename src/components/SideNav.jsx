@@ -1,6 +1,6 @@
 import { first151Pokemon, getFullPokedexNumber } from "../utils"
 
-export function SideNav () { // will render out all the different pokemon from the original 151 pokemon in the first pokeLibrary, user will be able to select pokemon different pokemon and get a breakdown of their stats 
+export default function SideNav () { // will render out all the different pokemon from the original 151 pokemon in the first pokeLibrary, user will be able to select pokemon different pokemon and get a breakdown of their stats 
     return (
         <nav>
             <div className={"header"}>
@@ -9,7 +9,7 @@ export function SideNav () { // will render out all the different pokemon from t
             <input />
             {first151Pokemon.map((pokemon, pokemonIndex) => {
             return(
-                <button className={'nav-card'}>
+                <button key={pokemonIndex} className={'nav-card'}>
                     <p>{getFullPokedexNumber(pokemonIndex)}</p>
                     <p>{pokemon}</p>
                 </button>

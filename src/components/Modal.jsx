@@ -1,3 +1,14 @@
-export function Modal () { // will render out a modal window when user clicks on certain skills for a popup, such as a pokemon ability or type for more information
-    return 
+import ReactDom from 'react-dom'
+
+export default function Modal(props) {
+    const { children, handleCloseModal } = props
+    return ReactDom.createPortal(
+        <div className='modal-container'>
+            <button onClick={handleCloseModal} className='modal-underlay' />
+            <div className='modal-content'>
+                {children}
+            </div>
+        </div>,
+        document.getElementById('portal')
+    )
 }
