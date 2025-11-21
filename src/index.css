@@ -60,6 +60,15 @@ nav {
   height: 100vh;
   background: var(--background-primary);
   z-index: 10;
+
+   /* HIDE SCROLLBAR */
+   scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+nav::-webkit-scrollbar {        /* Chrome/Safari */
+  width: 0;
+  height: 0;
 }
 
 nav div:first-of-type {

@@ -8,14 +8,25 @@ import {useState} from "react"
 
 function App() {
   const [selectedPokemon, setSelectedPokemon] = useState(0)
+  const [showSideMenu, setShowSideMenu] = useState(true) //this does the opposite of what it should do (ie, when showSideMeny it true, its actual false)
+
+  function handleToggleMenu() {
+    setShowSideMenu(!showSideMenu)
+  } 
+
+  function handleCloseMenu() {
+    setShowSideMenu(true)
+  }
 
   return (
     <>
-    <Header />
-    <Modal />
-    <PokeCard selectedPokemon = {selectedPokemon} setSelectedPokemon = {setSelectedPokemon} />
-    <SideNav selectedPokemon = {selectedPokemon}/>
-    <TypeCard />
+    <Header handleToggleMenu={handleToggleMenu} />
+    <SideNav 
+      showSideMenu={showSideMenu} 
+      selectedPokemon = {selectedPokemon} 
+      setSelectedPokemon = {setSelectedPokemon} 
+      handleCloseMenu={handleCloseMenu} />
+    <PokeCard selectedPokemon = {selectedPokemon} />
     </>
   )
 }
