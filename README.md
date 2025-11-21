@@ -30,7 +30,3 @@ Adding LocalStorage to your tech stack shows:
 This project demonstrates practical frontend skills: API integration, state management, caching, and modular component architecture. It’s both a learning exercise and a showcase of building fun, interactive apps with modern tooling — while highlighting custom CSS design instead of relying on frameworks.
 
 
-Great question, Dee — let’s make sure your PokéLibrary tech stack description properly calls out the fact that you’re using LocalStorage as part of your architecture. Recruiters and other devs will appreciate seeing that you’ve thought about caching and performance optimization.
-
-
-
